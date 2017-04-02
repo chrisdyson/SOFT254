@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F11940831E8EA7C30063E788 /* ViewControllerLecturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */; };
+		F11940851E8EA88D0063E788 /* ViewControllerStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */; };
 		F19DE9EB1E7FFEC000CD3B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DE9EA1E7FFEC000CD3B16 /* AppDelegate.swift */; };
 		F19DE9ED1E7FFEC000CD3B16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DE9EC1E7FFEC000CD3B16 /* ViewController.swift */; };
 		F19DE9F01E7FFEC000CD3B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19DE9EE1E7FFEC000CD3B16 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLecturer.swift; sourceTree = "<group>"; };
+		F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerStudent.swift; sourceTree = "<group>"; };
 		F19DE9E71E7FFEC000CD3B16 /* SOFT254 Coursework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOFT254 Coursework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19DE9EA1E7FFEC000CD3B16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19DE9EC1E7FFEC000CD3B16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				F19DE9EA1E7FFEC000CD3B16 /* AppDelegate.swift */,
 				F19DE9EC1E7FFEC000CD3B16 /* ViewController.swift */,
 				F19DE9EE1E7FFEC000CD3B16 /* Main.storyboard */,
+				F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */,
+				F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */,
 				F19DE9F11E7FFEC000CD3B16 /* Assets.xcassets */,
 				F19DE9F31E7FFEC000CD3B16 /* LaunchScreen.storyboard */,
 				F19DE9F61E7FFEC000CD3B16 /* Info.plist */,
@@ -262,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11940851E8EA88D0063E788 /* ViewControllerStudent.swift in Sources */,
+				F11940831E8EA7C30063E788 /* ViewControllerLecturer.swift in Sources */,
 				F19DE9ED1E7FFEC000CD3B16 /* ViewController.swift in Sources */,
 				F19DE9EB1E7FFEC000CD3B16 /* AppDelegate.swift in Sources */,
 			);
@@ -514,6 +522,7 @@
 				F19DEA111E7FFEC000CD3B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F19DEA121E7FFEC000CD3B16 /* Build configuration list for PBXNativeTarget "SOFT254 CourseworkTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +531,7 @@
 				F19DEA141E7FFEC000CD3B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F19DEA151E7FFEC000CD3B16 /* Build configuration list for PBXNativeTarget "SOFT254 CourseworkUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +540,7 @@
 				F19DEA171E7FFEC000CD3B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

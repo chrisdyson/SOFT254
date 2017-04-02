@@ -1,26 +1,174 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SOFT254_Coursework" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwL-Ah-Nln">
+                                <rect key="frame" x="182.66666666666666" y="512" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="7Ub-b0-MhK" kind="show" id="cM1-n9-1Wh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9KA-iM-aCn">
+                                <rect key="frame" x="141.66666666666669" y="274" width="131.00000000000006" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="Wdt-5V-YPr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="yqV-iC-FbZ">
+                                <rect key="frame" x="142" y="354" width="131" height="29"/>
+                                <segments>
+                                    <segment title="Lecturer"/>
+                                    <segment title="Student"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segPicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="tgF-jE-HUY"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TC-Us-26b">
+                                <rect key="frame" x="87" y="279" width="49.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7w-QG-LxF">
+                                <rect key="frame" x="141.66666666666669" y="432" width="131.00000000000006" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="6p4-TU-A92"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="miF-r5-cIZ"/>
+                                </connections>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAn-9c-syO">
+                                <rect key="frame" x="57.666666666666657" y="437" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XE-qA-sf2">
+                                <rect key="frame" x="182.66666666666666" y="432" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="voD-de-NCc" kind="show" id="4mI-aO-f8i"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yqV-iC-FbZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Ll-NX-DXf"/>
+                            <constraint firstItem="U7w-QG-LxF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Gy-QQ-J0g"/>
+                            <constraint firstItem="qAn-9c-syO" firstAttribute="centerY" secondItem="U7w-QG-LxF" secondAttribute="centerY" id="7QS-nU-oHP"/>
+                            <constraint firstItem="wwL-Ah-Nln" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FGn-AB-afa"/>
+                            <constraint firstItem="5XE-qA-sf2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HE6-Ms-zkT"/>
+                            <constraint firstItem="9TC-Us-26b" firstAttribute="centerY" secondItem="9KA-iM-aCn" secondAttribute="centerY" id="P4b-Mt-KSy"/>
+                            <constraint firstItem="U7w-QG-LxF" firstAttribute="leading" secondItem="qAn-9c-syO" secondAttribute="trailing" constant="5" id="TNU-vS-hFp"/>
+                            <constraint firstItem="9KA-iM-aCn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ikp-cV-Zwb"/>
+                            <constraint firstItem="yqV-iC-FbZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iyW-yq-lvV"/>
+                            <constraint firstItem="yqV-iC-FbZ" firstAttribute="top" secondItem="9KA-iM-aCn" secondAttribute="bottom" constant="50" id="mWj-zb-FHu"/>
+                            <constraint firstItem="9KA-iM-aCn" firstAttribute="leading" secondItem="9TC-Us-26b" secondAttribute="trailing" constant="5" id="mwE-3C-JCi"/>
+                            <constraint firstItem="U7w-QG-LxF" firstAttribute="top" secondItem="yqV-iC-FbZ" secondAttribute="bottom" constant="50" id="y60-Et-tQx"/>
+                            <constraint firstItem="wwL-Ah-Nln" firstAttribute="top" secondItem="U7w-QG-LxF" secondAttribute="bottom" constant="50" id="yPS-lI-U7o"/>
+                            <constraint firstItem="5XE-qA-sf2" firstAttribute="top" secondItem="yqV-iC-FbZ" secondAttribute="bottom" constant="50" id="zf7-pH-pLZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnGoToLecturer" destination="wwL-Ah-Nln" id="bMN-5l-Ycg"/>
+                        <outlet property="btnGoToStudent" destination="5XE-qA-sf2" id="f1v-y5-MAh"/>
+                        <outlet property="lblPassword" destination="qAn-9c-syO" id="UU8-Rz-O3m"/>
+                        <outlet property="segPicker" destination="yqV-iC-FbZ" id="3Xj-RY-CNG"/>
+                        <outlet property="txtName" destination="9KA-iM-aCn" id="p8g-RN-X9D"/>
+                        <outlet property="txtPassword" destination="U7w-QG-LxF" id="jxJ-b2-AqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="36.684782608695656"/>
+        </scene>
+        <!--View Controller Lecturer-->
+        <scene sceneID="frc-L1-quF">
+            <objects>
+                <viewController id="7Ub-b0-MhK" customClass="ViewControllerLecturer" customModule="SOFT254_Coursework" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wa1-NR-ddX"/>
+                        <viewControllerLayoutGuide type="bottom" id="oXO-f9-Mpj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eHC-QA-G6A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecturer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hW-CD-5iX">
+                                <rect key="frame" x="175" y="357.66666666666669" width="64.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8hW-CD-5iX" firstAttribute="centerX" secondItem="eHC-QA-G6A" secondAttribute="centerX" id="ZqD-Uf-Wjx"/>
+                            <constraint firstItem="8hW-CD-5iX" firstAttribute="centerY" secondItem="eHC-QA-G6A" secondAttribute="centerY" id="ubX-sV-hPG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxR-nF-tmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819" y="-266"/>
+        </scene>
+        <!--View Controller Student-->
+        <scene sceneID="dKo-7m-dhC">
+            <objects>
+                <viewController id="voD-de-NCc" customClass="ViewControllerStudent" customModule="SOFT254_Coursework" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CqO-51-I5B"/>
+                        <viewControllerLayoutGuide type="bottom" id="7xe-ak-uSx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BcB-OT-OJR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDV-H3-pRZ">
+                                <rect key="frame" x="176.66666666666666" y="357.66666666666669" width="60.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PDV-H3-pRZ" firstAttribute="centerY" secondItem="BcB-OT-OJR" secondAttribute="centerY" id="JTx-I7-O9X"/>
+                            <constraint firstItem="PDV-H3-pRZ" firstAttribute="centerX" secondItem="BcB-OT-OJR" secondAttribute="centerX" id="l9K-Zd-ZJy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BqA-lO-dSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819" y="367"/>
         </scene>
     </scenes>
 </document>
