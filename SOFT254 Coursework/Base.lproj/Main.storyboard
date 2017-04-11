@@ -162,14 +162,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session ( ) - Queue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hW-CD-5iX">
-                                <rect key="frame" x="20" y="30" width="214" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hW-CD-5iX">
+                                <rect key="frame" x="20" y="30" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uIP-mW-GrC">
-                                <rect key="frame" x="20" y="70" width="374" height="547"/>
+                                <rect key="frame" x="20" y="40" width="374" height="602"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="7Ub-b0-MhK" id="nDK-F5-nXL"/>
@@ -200,7 +200,7 @@
                             <constraint firstAttribute="trailing" secondItem="dq5-eA-6Lq" secondAttribute="trailing" id="Wph-hG-6LZ"/>
                             <constraint firstItem="8hW-CD-5iX" firstAttribute="top" secondItem="Wa1-NR-ddX" secondAttribute="bottom" constant="10" id="Xts-OY-t7b"/>
                             <constraint firstItem="uIP-mW-GrC" firstAttribute="top" secondItem="8hW-CD-5iX" secondAttribute="bottom" constant="10" id="ch5-fW-rGs"/>
-                            <constraint firstItem="dq5-eA-6Lq" firstAttribute="top" secondItem="uIP-mW-GrC" secondAttribute="bottom" constant="75" id="dsa-YC-Zoq"/>
+                            <constraint firstItem="dq5-eA-6Lq" firstAttribute="top" secondItem="uIP-mW-GrC" secondAttribute="bottom" constant="50" id="dsa-YC-Zoq"/>
                             <constraint firstItem="dq5-eA-6Lq" firstAttribute="leading" secondItem="eHC-QA-G6A" secondAttribute="leading" id="fYH-Ip-KXE"/>
                             <constraint firstItem="oXO-f9-Mpj" firstAttribute="top" secondItem="dq5-eA-6Lq" secondAttribute="bottom" id="hrQ-53-9YY"/>
                         </constraints>

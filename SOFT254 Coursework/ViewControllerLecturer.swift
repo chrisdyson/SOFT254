@@ -13,7 +13,8 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         loadJSON()
-        scheduledTimerWithTimeInterval()
+        refreshTimerFunc()
+        lblLecTitle.text = "Session (\(sessionID)) - Queue"
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,50 +23,49 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     @IBAction func btnMarkComplete(_ sender: Any) {
+        markOneAsComplete()
     }
     @IBAction func btnStopSession(_ sender: Any) {
-        timer.invalidate()
+        refreshTimer.invalidate()
     }
     @IBOutlet weak var lblLecTitle: UILabel!
-    var myArray : [String] = []
-    var timer = Timer()
+    var myArray : [String] = ["Loading..."]
+    let sessionID = 1234
+    var refreshTimer = Timer()
     
-    func scheduledTimerWithTimeInterval(){
-        // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
-        //timer.invalidate   to stop timer
+    func refreshTimerFunc(){
+        refreshTimer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(self.updateData), userInfo: nil, repeats: true)
     }
-    var i = 0
-    func updateCounting(){
-        NSLog("counting..")
-        print("stuff")
-        i = i + 1
-        lblLecTitle.text = String(i)
+    
+    func updateData(){
+        self.tableView.deselectSelectedRow(animated: true)
+        loadJSON()
     }
     
     func loadJSON() {
-        let url = URL(string: "http://46.32.240.33/ios.cdysonplym.co.uk/admin.php")
+        self.myArray = []
+        let url = URL(string: "http://46.32.240.33/ios.cdysonplym.co.uk/viewall.php?sid=\(sessionID)")
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
                 
-                var query = json["0"]
-                if let q = query {
-                    self.myArray.append(String(describing:q))
+                var i = 0
+                var j = String(i)
+                var b = true
+                
+                while (b == true) {
+                    let query = json[j]
+                    if let q = query {
+                        self.myArray.append(String(describing:q))
+                        i = i + 1
+                        j = String(i)
+                    }
+                    else {
+                        b = false
+                    }
                 }
-                query = json["1"]
-                if let q = query {
-                    self.myArray.append(String(describing:q))
-                }
-                query = json["2"]
-                if let q = query {
-                    self.myArray.append(String(describing:q))
-                }
-                query = json["3"]
-                if let q = query {
-                    self.myArray.append(String(describing:q))
-                }
+
                 DispatchQueue.main.async{
                     self.tableView.reloadData()
                 }
@@ -74,6 +74,14 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
                 print(error)
             }
         }).resume()
+    }
+    
+    func markOneAsComplete() {
+        let url = URL(string: "http://46.32.240.33/ios.cdysonplym.co.uk/deletesingle.php?sid=\(sessionID)&name=\(selectedString)")
+        URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
+            self.loadJSON()
+        }).resume()
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,9 +98,20 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    var selectedString = ""
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedString = self.myArray[indexPath.row]
-        print("You picked \(selectedString)")
+        selectedString = self.myArray[indexPath.row]
+        selectedString = selectedString.replacingOccurrences(of: " ", with: "%20")
     }
-    
+
+}
+
+extension UITableView {
+    public func deselectSelectedRow(animated: Bool)
+    {
+        if let indexPathForSelectedRow = self.indexPathForSelectedRow
+        {
+            self.deselectRow(at: indexPathForSelectedRow, animated: animated)
+        }
+    }
 }
