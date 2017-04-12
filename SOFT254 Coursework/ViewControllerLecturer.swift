@@ -12,25 +12,28 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        sessionID = ViewController.GlobalVariable.sessionID
+        navigationbar.title = "\(sessionID)"
         loadJSON()
         refreshTimerFunc()
-        lblLecTitle.text = "Session (\(sessionID)) - Queue"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    @IBOutlet weak var navigationbar: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
     @IBAction func btnMarkComplete(_ sender: Any) {
         markOneAsComplete()
     }
     @IBAction func btnStopSession(_ sender: Any) {
         refreshTimer.invalidate()
+        markAllAsComplete()
     }
     @IBOutlet weak var lblLecTitle: UILabel!
+    var sessionID : String = ""
     var myArray : [String] = ["Loading..."]
-    let sessionID = 1234
     var refreshTimer = Timer()
     
     func refreshTimerFunc(){
@@ -81,7 +84,13 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             self.loadJSON()
         }).resume()
-        
+    }
+
+    func markAllAsComplete() {
+        let url = URL(string: "http://46.32.240.33/ios.cdysonplym.co.uk/deleteall.php?sid=\(sessionID)")
+        URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
+            self.loadJSON()
+        }).resume()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
