@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831C916C1EA12B4C004DED8A /* internetCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C916B1EA12B4C004DED8A /* internetCheck.swift */; };
 		F11940831E8EA7C30063E788 /* ViewControllerLecturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */; };
 		F11940851E8EA88D0063E788 /* ViewControllerStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */; };
 		F19DE9EB1E7FFEC000CD3B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DE9EA1E7FFEC000CD3B16 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831C916B1EA12B4C004DED8A /* internetCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = internetCheck.swift; sourceTree = "<group>"; };
 		F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLecturer.swift; sourceTree = "<group>"; };
 		F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerStudent.swift; sourceTree = "<group>"; };
 		F19DE9E71E7FFEC000CD3B16 /* SOFT254 Coursework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOFT254 Coursework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			children = (
 				F19DE9EA1E7FFEC000CD3B16 /* AppDelegate.swift */,
 				F19DE9EC1E7FFEC000CD3B16 /* ViewController.swift */,
+				831C916B1EA12B4C004DED8A /* internetCheck.swift */,
 				F19DE9EE1E7FFEC000CD3B16 /* Main.storyboard */,
 				F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */,
 				F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */,
@@ -270,6 +273,7 @@
 			files = (
 				F11940851E8EA88D0063E788 /* ViewControllerStudent.swift in Sources */,
 				F11940831E8EA7C30063E788 /* ViewControllerLecturer.swift in Sources */,
+				831C916C1EA12B4C004DED8A /* internetCheck.swift in Sources */,
 				F19DE9ED1E7FFEC000CD3B16 /* ViewController.swift in Sources */,
 				F19DE9EB1E7FFEC000CD3B16 /* AppDelegate.swift in Sources */,
 			);

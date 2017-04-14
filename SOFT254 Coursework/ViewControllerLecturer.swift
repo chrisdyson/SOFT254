@@ -43,6 +43,12 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     func updateData(){
         self.tableView.deselectSelectedRow(animated: true)
         loadJSON()
+        if Reachability.isConnectedToNetwork() == true {
+            self.tableView.isHidden = false
+        }
+        else {
+            self.tableView.isHidden = true
+        }
     }
     
     func loadJSON() {
@@ -109,10 +115,15 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     
     var selectedString = ""
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedString = self.myArray[indexPath.row]
-        selectedString = selectedString.replacingOccurrences(of: " ", with: "%20")
+        //if Reachability.isConnectedToNetwork() == true {
+            selectedString = self.myArray[indexPath.row]
+            selectedString = selectedString.replacingOccurrences(of: " ", with: "%20")
+        //}
+        //else {
+        //    self.tableView.deselectSelectedRow(animated: true)
+        //}
     }
-
+    
 }
 
 extension UITableView {

@@ -17,6 +17,22 @@ class ViewControllerStudent: UIViewController, UITextFieldDelegate {
         self.txtName.delegate = self
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        refreshInternetTimerFunc()
+    }
+    
+    var refreshInternetTimer = Timer()
+    
+    func refreshInternetTimerFunc(){
+        refreshInternetTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.updateInternetData), userInfo: nil, repeats: true)
+    }
+    
+    func updateInternetData(){
+        if Reachability.isConnectedToNetwork() == true {
+            self.txtName.isEnabled = true
+        }
+        else {
+            self.txtName.isEnabled = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,5 +73,5 @@ class ViewControllerStudent: UIViewController, UITextFieldDelegate {
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
         }).resume()
     }
-
+    
 }
