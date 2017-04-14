@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="yqV-iC-FbZ">
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="yqV-iC-FbZ">
                                 <rect key="frame" x="122" y="149" width="131" height="29"/>
                                 <segments>
                                     <segment title="Lecturer"/>
@@ -207,21 +207,13 @@
                                     <action selector="btnAddToQ:" destination="voD-de-NCc" eventType="touchUpInside" id="U9o-Ne-gj9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-MT-tM2">
-                                <rect key="frame" x="187" y="234" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QKr-MT-tM2" firstAttribute="top" secondItem="gfq-uL-YpS" secondAttribute="bottom" constant="50" id="7Qx-bZ-N7I"/>
                             <constraint firstItem="gfq-uL-YpS" firstAttribute="centerX" secondItem="BcB-OT-OJR" secondAttribute="centerX" id="AjC-PD-Lv7"/>
                             <constraint firstItem="Cp5-dU-4vk" firstAttribute="centerX" secondItem="BcB-OT-OJR" secondAttribute="centerX" id="BvJ-vP-asZ"/>
                             <constraint firstItem="ltX-Nf-xWy" firstAttribute="centerY" secondItem="Cp5-dU-4vk" secondAttribute="centerY" id="O1V-Qw-TWv"/>
                             <constraint firstItem="gfq-uL-YpS" firstAttribute="top" secondItem="Cp5-dU-4vk" secondAttribute="bottom" constant="20" id="ekE-Zh-Hja"/>
-                            <constraint firstItem="QKr-MT-tM2" firstAttribute="centerX" secondItem="BcB-OT-OJR" secondAttribute="centerX" id="hM9-Wq-YJc"/>
                             <constraint firstItem="Cp5-dU-4vk" firstAttribute="top" secondItem="CqO-51-I5B" secondAttribute="bottom" constant="40" id="m6R-mz-Weh"/>
                             <constraint firstItem="Cp5-dU-4vk" firstAttribute="leading" secondItem="ltX-Nf-xWy" secondAttribute="trailing" constant="10" id="ucx-XW-uyQ"/>
                         </constraints>
@@ -229,7 +221,6 @@
                     <navigationItem key="navigationItem" title="Student View" id="5PS-9P-8Tx"/>
                     <connections>
                         <outlet property="btnAddToQ" destination="gfq-uL-YpS" id="6x6-JX-6zg"/>
-                        <outlet property="lblMessage" destination="QKr-MT-tM2" id="s2D-gS-bYb"/>
                         <outlet property="navigationbar" destination="5PS-9P-8Tx" id="V0x-kt-hbk"/>
                         <outlet property="txtName" destination="Cp5-dU-4vk" id="NDE-Nd-7XG"/>
                     </connections>

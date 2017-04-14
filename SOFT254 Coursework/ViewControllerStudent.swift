@@ -32,20 +32,21 @@ class ViewControllerStudent: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var btnAddToQ: UIButton!
     @IBAction func btnAddToQ(_ sender: Any) {
-        
         if let t = txtName.text, !t.isEmpty {
             addToQueue(name: t)
-            lblMessage.text = "Added to queue"
+            let alert = UIAlertController(title: "Success", message: "Added to queue, \(sessionID)", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             txtName.text = ""
         }
         else {
-            lblMessage.text = "Name cannot be blank"
+            let alert = UIAlertController(title: "Error", message: "Name cannot be blank", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
-        
     }
     @IBOutlet weak var navigationbar: UINavigationItem!
     var sessionID : String = ""

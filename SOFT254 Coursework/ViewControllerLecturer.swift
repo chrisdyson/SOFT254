@@ -37,7 +37,7 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     var refreshTimer = Timer()
     
     func refreshTimerFunc(){
-        refreshTimer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(self.updateData), userInfo: nil, repeats: true)
+        refreshTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.updateData), userInfo: nil, repeats: true)
     }
     
     func updateData(){
