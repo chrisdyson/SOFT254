@@ -34,6 +34,7 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var lblLecTitle: UILabel!
     var sessionID : String = ""
     var myArray : [String] = ["Loading..."]
+    var myArrayTime: [String] = ["Loading"]
     var refreshTimer = Timer()
     
     func refreshTimerFunc(){
@@ -53,7 +54,9 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     
     func loadJSON() {
         self.myArray = []
-        let url = URL(string: "http://46.32.240.33/ios.cdysonplym.co.uk/viewall.php?sid=\(sessionID)")
+        self.myArrayTime = []
+        
+        let url = URL(string: ViewController.GlobalVariable.url + "viewall.php?sid=\(sessionID)")
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
             do {
@@ -75,9 +78,36 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
                     }
                 }
 
-                DispatchQueue.main.async{
-                    self.tableView.reloadData()
-                }
+                let url = URL(string: ViewController.GlobalVariable.url + "viewtimes.php?sid=\(self.sessionID)")
+                URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
+                    guard let data = data, error == nil else { return }
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+                        
+                        var i = 0
+                        var j = String(i)
+                        var b = true
+                        
+                        while (b == true) {
+                            let query = json[j]
+                            if let q = query {
+                                self.myArrayTime.append(String(describing:q))
+                                i = i + 1
+                                j = String(i)
+                            }
+                            else {
+                                b = false
+                            }
+                        }
+                        
+                        DispatchQueue.main.async{
+                            self.tableView.reloadData()
+                        }
+                        
+                    } catch let error as NSError {
+                        print(error)
+                    }
+                }).resume()
                 
             } catch let error as NSError {
                 print(error)
@@ -86,14 +116,14 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     }
     
     func markOneAsComplete() {
-        let url = URL(string: "http://46.32.240.33/ios.cdysonplym.co.uk/deletesingle.php?sid=\(sessionID)&name=\(selectedString)")
+        let url = URL(string: ViewController.GlobalVariable.url + "deletesingle.php?sid=\(sessionID)&name=\(selectedString)")
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             self.loadJSON()
         }).resume()
     }
 
     func markAllAsComplete() {
-        let url = URL(string: "http://46.32.240.33/ios.cdysonplym.co.uk/deleteall.php?sid=\(sessionID)")
+        let url = URL(string: ViewController.GlobalVariable.url + "deleteall.php?sid=\(sessionID)")
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             self.loadJSON()
         }).resume()
@@ -108,22 +138,24 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)
-        cell.textLabel?.text = self.myArray[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! DetailTableViewCell
+        cell.lblTitle?.text = self.myArray[indexPath.row]
+        cell.lblSubtitle?.text = "Time joined queue: \(self.myArrayTime[indexPath.row])"
+        
         return cell
     }
     
     var selectedString = ""
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //if Reachability.isConnectedToNetwork() == true {
-            selectedString = self.myArray[indexPath.row]
-            selectedString = selectedString.replacingOccurrences(of: " ", with: "%20")
-        //}
-        //else {
-        //    self.tableView.deselectSelectedRow(animated: true)
-        //}
+        selectedString = self.myArray[indexPath.row]
+        selectedString = selectedString.replacingOccurrences(of: " ", with: "%20")
     }
     
+}
+
+class DetailTableViewCell: UITableViewCell {
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblSubtitle: UILabel!
 }
 
 extension UITableView {

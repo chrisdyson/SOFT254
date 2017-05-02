@@ -69,7 +69,7 @@ class ViewControllerStudent: UIViewController, UITextFieldDelegate {
 
     func addToQueue(name: String) {
         let newName = name.replacingOccurrences(of: " ", with: "%20")
-        let url = URL(string: "http://46.32.240.33/ios.cdysonplym.co.uk/addsingle.php?sid=\(sessionID)&name=\(newName)")
+        let url = URL(string: ViewController.GlobalVariable.url + "addsingle.php?sid=\(sessionID)&name=\(newName)")
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
         }).resume()
     }

@@ -30,6 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if Reachability.isConnectedToNetwork() == true
         {
             self.txtID.isEnabled = true
+            getPassword()
         }
         else {
             self.txtID.isEnabled = false
@@ -54,9 +55,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     struct GlobalVariable{
         static var sessionID = "0000"
+        static var url = "http://46.32.240.33/ios.cdysonplym.co.uk/"
     }
     
-    let lecPassword = "1995"
+    func getPassword() {
+        let url = URL(string: GlobalVariable.url + "lecturerpassword.txt")
+        URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
+            guard let data = data, error == nil else { return }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+                self.lecPassword = json["Password"] as! String
+                
+            } catch let error as NSError {
+                print(error)
+            }
+        }).resume()
+    }
+    
+    var lecPassword = ""
     @IBOutlet weak var txtID: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var lblPassword: UILabel!
@@ -125,10 +141,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 segPicker.isHidden = false
             }
             else {
-                segPicker.isHidden = true
+                resetOnBack()
             }
             if let t = txtID.text {
                 ViewController.GlobalVariable.sessionID = t
+            }
+        case txtPassword:
+            if let t = txtPassword.text, t.isEmpty {
+                btnGoToLecturer.isHidden = true
+            }
+            else {
+                btnGoToLecturer.isHidden = false
             }
         default:
             print ("Error")

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		831C916C1EA12B4C004DED8A /* internetCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C916B1EA12B4C004DED8A /* internetCheck.swift */; };
+		83D7BFB71EB7D28900457937 /* ViewControllerHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7BFB61EB7D28900457937 /* ViewControllerHelp.swift */; };
 		F11940831E8EA7C30063E788 /* ViewControllerLecturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */; };
 		F11940851E8EA88D0063E788 /* ViewControllerStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */; };
 		F19DE9EB1E7FFEC000CD3B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DE9EA1E7FFEC000CD3B16 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		831C916B1EA12B4C004DED8A /* internetCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = internetCheck.swift; sourceTree = "<group>"; };
+		83D7BFB61EB7D28900457937 /* ViewControllerHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHelp.swift; sourceTree = "<group>"; };
 		F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLecturer.swift; sourceTree = "<group>"; };
 		F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerStudent.swift; sourceTree = "<group>"; };
 		F19DE9E71E7FFEC000CD3B16 /* SOFT254 Coursework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOFT254 Coursework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				F19DE9F11E7FFEC000CD3B16 /* Assets.xcassets */,
 				F19DE9F31E7FFEC000CD3B16 /* LaunchScreen.storyboard */,
 				F19DE9F61E7FFEC000CD3B16 /* Info.plist */,
+				83D7BFB61EB7D28900457937 /* ViewControllerHelp.swift */,
 			);
 			path = "SOFT254 Coursework";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				F11940851E8EA88D0063E788 /* ViewControllerStudent.swift in Sources */,
 				F11940831E8EA7C30063E788 /* ViewControllerLecturer.swift in Sources */,
 				831C916C1EA12B4C004DED8A /* internetCheck.swift in Sources */,
+				83D7BFB71EB7D28900457937 /* ViewControllerHelp.swift in Sources */,
 				F19DE9ED1E7FFEC000CD3B16 /* ViewController.swift in Sources */,
 				F19DE9EB1E7FFEC000CD3B16 /* AppDelegate.swift in Sources */,
 			);

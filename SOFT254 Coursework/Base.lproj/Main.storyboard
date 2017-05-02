@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A8b-36-glN">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="yqV-iC-FbZ">
-                                <rect key="frame" x="141.66666666666669" y="149" width="131.00000000000006" height="29"/>
+                                <rect key="frame" x="94.5" y="149" width="131" height="29"/>
                                 <segments>
                                     <segment title="Lecturer"/>
                                     <segment title="Student"/>
@@ -33,13 +33,13 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TC-Us-26b">
-                                <rect key="frame" x="62" y="98.666666666666671" width="85" height="21"/>
+                                <rect key="frame" x="15" y="99" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="U7w-QG-LxF">
-                                <rect key="frame" x="147" y="202" width="120" height="30"/>
+                                <rect key="frame" x="100" y="202" width="120" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="6p4-TU-A92"/>
                                 </constraints>
@@ -51,7 +51,7 @@
                                 </connections>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XE-qA-sf2">
-                                <rect key="frame" x="182.66666666666666" y="202" width="49" height="30"/>
+                                <rect key="frame" x="135.5" y="202" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="btnStu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVY-mg-k24"/>
@@ -59,13 +59,13 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAn-9c-syO">
-                                <rect key="frame" x="58" y="207" width="79" height="21"/>
+                                <rect key="frame" x="11" y="207" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwL-Ah-Nln">
-                                <rect key="frame" x="182.66666666666666" y="257" width="49" height="30"/>
+                                <rect key="frame" x="135.5" y="257" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="btnLec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5y-wL-uPg"/>
@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vTI-hg-MPT">
-                                <rect key="frame" x="157" y="94" width="100" height="30"/>
+                                <rect key="frame" x="110" y="94" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="7YB-Vh-qes"/>
                                 </constraints>
@@ -102,6 +102,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lab Support" id="1X0-nC-H6A">
                         <barButtonItem key="backBarButtonItem" title="Back" id="D2J-KO-OUY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="tqv-SS-sy3">
+                            <connections>
+                                <segue destination="d40-oj-1G8" kind="show" id="i0O-Sm-tP6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnGoToLecturer" destination="wwL-Ah-Nln" id="bMN-5l-Ycg"/>
@@ -125,11 +130,11 @@
                         <viewControllerLayoutGuide type="bottom" id="oXO-f9-Mpj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eHC-QA-G6A">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq5-eA-6Lq">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Mark as Complete" id="Q5I-PW-tjY">
                                         <connections>
@@ -144,26 +149,77 @@
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uIP-mW-GrC">
-                                <rect key="frame" x="20" y="79" width="374" height="598"/>
+                                <rect key="frame" x="16" y="79" width="288" height="342"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="LabelCell" textLabel="Mdk-Eq-8kf" detailTextLabel="zOX-xO-vwL" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="US9-4g-xaG" customClass="DetailTableViewCell" customModule="SOFT254_Coursework" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="US9-4g-xaG" id="4Ft-i7-p7w">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="74.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mdk-Eq-8kf">
+                                                    <rect key="frame" x="15" y="20" width="35.5" height="21.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zOX-xO-vwL">
+                                                    <rect key="frame" x="15" y="41.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblSubtitle" destination="zOX-xO-vwL" id="Ffp-J8-LrD"/>
+                                            <outlet property="lblTitle" destination="Mdk-Eq-8kf" id="eZa-Z9-chc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="7Ub-b0-MhK" id="nDK-F5-nXL"/>
                                     <outlet property="delegate" destination="7Ub-b0-MhK" id="AeR-9s-Arf"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6ve-Sh-cMW">
+                                <rect key="frame" x="274" y="391" width="20" height="20"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refreshing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEw-xQ-rQw">
+                                <rect key="frame" x="186" y="390" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uIP-mW-GrC" firstAttribute="leading" secondItem="eHC-QA-G6A" secondAttribute="leadingMargin" id="80u-cD-BSl"/>
+                            <constraint firstItem="dq5-eA-6Lq" firstAttribute="top" secondItem="6ve-Sh-cMW" secondAttribute="bottom" constant="25" id="9T2-1p-3AL"/>
                             <constraint firstItem="uIP-mW-GrC" firstAttribute="trailing" secondItem="eHC-QA-G6A" secondAttribute="trailingMargin" id="FkD-q0-gBV"/>
+                            <constraint firstItem="dq5-eA-6Lq" firstAttribute="top" secondItem="rEw-xQ-rQw" secondAttribute="bottom" constant="25" id="R1Z-Ug-cfZ"/>
                             <constraint firstItem="uIP-mW-GrC" firstAttribute="top" secondItem="Wa1-NR-ddX" secondAttribute="bottom" constant="15" id="TpV-I7-STS"/>
                             <constraint firstAttribute="trailing" secondItem="dq5-eA-6Lq" secondAttribute="trailing" id="Wph-hG-6LZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6ve-Sh-cMW" secondAttribute="trailing" constant="10" id="Y7d-ua-II2"/>
                             <constraint firstItem="dq5-eA-6Lq" firstAttribute="top" secondItem="uIP-mW-GrC" secondAttribute="bottom" constant="15" id="dsa-YC-Zoq"/>
                             <constraint firstItem="dq5-eA-6Lq" firstAttribute="leading" secondItem="eHC-QA-G6A" secondAttribute="leading" id="fYH-Ip-KXE"/>
                             <constraint firstItem="oXO-f9-Mpj" firstAttribute="top" secondItem="dq5-eA-6Lq" secondAttribute="bottom" id="hrQ-53-9YY"/>
+                            <constraint firstItem="6ve-Sh-cMW" firstAttribute="leading" secondItem="rEw-xQ-rQw" secondAttribute="trailing" constant="5" id="iRc-bu-7Jl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lecturer View" id="m2e-YB-2dr"/>
+                    <navigationItem key="navigationItem" title="Lecturer View" id="m2e-YB-2dr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="wr2-e1-8a0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="Nwx-cM-GTb">
+                            <connections>
+                                <segue destination="d40-oj-1G8" kind="show" id="0ag-wD-ErR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="navigationbar" destination="m2e-YB-2dr" id="x2J-Wg-86f"/>
                         <outlet property="tableView" destination="uIP-mW-GrC" id="S9m-kf-Zzt"/>
@@ -182,11 +238,11 @@
                         <viewControllerLayoutGuide type="bottom" id="7xe-ak-uSx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BcB-OT-OJR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-dU-4vk">
-                                <rect key="frame" x="132" y="104" width="150" height="30"/>
+                                <rect key="frame" x="85" y="104" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="kUM-QG-k4L"/>
                                 </constraints>
@@ -195,13 +251,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltX-Nf-xWy">
-                                <rect key="frame" x="72" y="108.66666666666666" width="50" height="20.999999999999972"/>
+                                <rect key="frame" x="25" y="109" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfq-uL-YpS">
-                                <rect key="frame" x="159.66666666666666" y="154" width="95" height="30"/>
+                                <rect key="frame" x="112.5" y="154" width="95" height="30"/>
                                 <state key="normal" title="Add to Queue"/>
                                 <connections>
                                     <action selector="btnAddToQ:" destination="voD-de-NCc" eventType="touchUpInside" id="U9o-Ne-gj9"/>
@@ -218,7 +274,14 @@
                             <constraint firstItem="Cp5-dU-4vk" firstAttribute="leading" secondItem="ltX-Nf-xWy" secondAttribute="trailing" constant="10" id="ucx-XW-uyQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Student View" id="5PS-9P-8Tx"/>
+                    <navigationItem key="navigationItem" title="Student View" id="5PS-9P-8Tx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="DxP-Cf-ZQx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="WCB-1V-9mo">
+                            <connections>
+                                <segue destination="d40-oj-1G8" kind="show" id="fmP-4K-xdZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnAddToQ" destination="gfq-uL-YpS" id="6x6-JX-6zg"/>
                         <outlet property="navigationbar" destination="5PS-9P-8Tx" id="V0x-kt-hbk"/>
@@ -228,6 +291,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqA-lO-dSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2292" y="35.532233883058474"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="cYf-Iz-TJA">
+            <objects>
+                <viewController title="Help" id="d40-oj-1G8" customClass="ViewControllerHelp" customModule="SOFT254_Coursework" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yks-Sb-FqW"/>
+                        <viewControllerLayoutGuide type="bottom" id="MRA-c2-kgO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tbb-DM-qip">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-Gf-JNU">
+                                <rect key="frame" x="61.5" y="89" width="197" height="29"/>
+                                <segments>
+                                    <segment title="Home"/>
+                                    <segment title="Student"/>
+                                    <segment title="Lecturer"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segWhich:" destination="d40-oj-1G8" eventType="valueChanged" id="HEz-K4-EMx"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dID-Fc-hoP">
+                                <rect key="frame" x="16" y="115" width="288" height="345"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Session ID: Enter the 4 digit code the lecturer has provided at the start of the practical to join the lab support queue. For lecturers, use the code to view students waiting the in the lab support queue.  If you are a student, no passwords are required to then access the student page.  If you are a lecturer, then a password is required to view students in the queue. You can only proceed once the password has been entered correctly. This password will be sent to all lecturers which they will need to keep a note of. Any password changes, emails will be sent out notifying of the change.   This app requires an internet conenction so it also checks occasionally and on startup whether you are connected or not. If you are not connected, you will not be able to proceed to either page. If you are already on the page, then the ability to add yourself to the queue as a student won't be possible and lecturers won't be able to view or edit the queue until an internet conenction is reestablished.</mutableString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-IC-7RY">
+                                <rect key="frame" x="16" y="115" width="288" height="345"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">On the student page, all that is needed is for the student to enter their name and hit 'Add to Queue' button. They will be notified if it was successful and they will be in the lab support queue.</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcj-Sz-YoW">
+                                <rect key="frame" x="16" y="115" width="288" height="345"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">On the lecturer page, the main object on the screen is a list which will be populated by students who are waiting in the queue to be seen. The student to see first will be at the top of the list. The name of the student is shown and also the time they were added to the queue.   Every few seconds the list will automatically refresh to show the latest queue.   Once a student has been attended to, you select the student then tap the button on the menu bar at the bottom of the screen 'Mark as Complete'. This will remove them from the queue and update it. At the end of the practical, you should hit 'Stop Session' also on the menu bar. This will remove any remaining students from the queue and stop refreshing the queue.</mutableString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zaQ-Gf-JNU" firstAttribute="top" secondItem="yks-Sb-FqW" secondAttribute="bottom" constant="25" id="0Ov-wb-w35"/>
+                            <constraint firstItem="zaQ-Gf-JNU" firstAttribute="centerX" secondItem="tbb-DM-qip" secondAttribute="centerX" id="41X-Wl-4kx"/>
+                            <constraint firstItem="8ra-IC-7RY" firstAttribute="centerX" secondItem="tbb-DM-qip" secondAttribute="centerX" id="AJm-YH-EEB"/>
+                            <constraint firstItem="dID-Fc-hoP" firstAttribute="centerX" secondItem="tbb-DM-qip" secondAttribute="centerX" id="DiW-zj-tbY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="8ra-IC-7RY" secondAttribute="leading" id="F2f-ud-NMS"/>
+                            <constraint firstItem="MRA-c2-kgO" firstAttribute="top" secondItem="8ra-IC-7RY" secondAttribute="bottom" constant="20" id="H8Y-PO-ah3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dID-Fc-hoP" secondAttribute="trailing" id="IRl-Tu-QSV"/>
+                            <constraint firstItem="Dcj-Sz-YoW" firstAttribute="centerX" secondItem="tbb-DM-qip" secondAttribute="centerX" id="KK7-5b-yti"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dID-Fc-hoP" secondAttribute="leading" id="RjU-Z0-6EG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dcj-Sz-YoW" secondAttribute="trailing" id="anO-3F-xZ6"/>
+                            <constraint firstItem="MRA-c2-kgO" firstAttribute="top" secondItem="dID-Fc-hoP" secondAttribute="bottom" constant="20" id="bMD-fz-EhD"/>
+                            <constraint firstItem="MRA-c2-kgO" firstAttribute="top" secondItem="Dcj-Sz-YoW" secondAttribute="bottom" constant="20" id="nQm-f4-Rj0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8ra-IC-7RY" secondAttribute="trailing" id="okK-fW-n64"/>
+                            <constraint firstItem="dID-Fc-hoP" firstAttribute="top" secondItem="zaQ-Gf-JNU" secondAttribute="bottom" constant="-2" id="oxq-XQ-cMh"/>
+                            <constraint firstItem="Dcj-Sz-YoW" firstAttribute="top" secondItem="zaQ-Gf-JNU" secondAttribute="bottom" constant="-2" id="sgH-Pb-3Ml"/>
+                            <constraint firstItem="8ra-IC-7RY" firstAttribute="top" secondItem="zaQ-Gf-JNU" secondAttribute="bottom" constant="-2" id="uVN-tX-ZjB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Dcj-Sz-YoW" secondAttribute="leading" id="uzJ-ez-BRf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="e5N-Sh-CNA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="cg0-b8-eA5"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segWhich" destination="zaQ-Gf-JNU" id="Whh-Gr-bYk"/>
+                        <outlet property="txtHome" destination="dID-Fc-hoP" id="rJ9-QG-Ofd"/>
+                        <outlet property="txtLecturer" destination="Dcj-Sz-YoW" id="bcb-Md-sOo"/>
+                        <outlet property="txtStudent" destination="8ra-IC-7RY" id="Gxi-oz-oUS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vr6-1V-ewK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1615.9420289855075" y="822.554347826087"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8pA-1T-55R">
@@ -248,4 +392,7 @@
             <point key="canvasLocation" x="20.289855072463769" y="34.239130434782609"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="i0O-Sm-tP6"/>
+    </inferredMetricsTieBreakers>
 </document>
