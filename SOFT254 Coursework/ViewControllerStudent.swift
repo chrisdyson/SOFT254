@@ -66,7 +66,7 @@ class ViewControllerStudent: UIViewController, UITextFieldDelegate {
     }
     @IBOutlet weak var navigationbar: UINavigationItem!
     var sessionID : String = ""
-
+    
     func addToQueue(name: String) {
         let newName = name.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: ViewController.GlobalVariable.url + "addsingle.php?sid=\(sessionID)&name=\(newName)")

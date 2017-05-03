@@ -118,22 +118,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool
-    {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,replacementString string: String) -> Bool {
         switch (textField) {
         case txtID:
+            let allowedCharacters = CharacterSet.decimalDigits
+            let characterSet = CharacterSet(charactersIn: string)
             let maxLength = 4
             let currentString: NSString = textField.text! as NSString
-            let newString: NSString =
-                currentString.replacingCharacters(in: range, with: string) as NSString
-            return newString.length <= maxLength
+            let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength && allowedCharacters.isSuperset(of: characterSet)
         default:
             print ("Error")
         }
         return true
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch (textField) {
         case txtID:
