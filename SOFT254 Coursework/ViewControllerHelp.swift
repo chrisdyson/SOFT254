@@ -53,6 +53,4 @@ class ViewControllerHelp: UIViewController {
             print ("Error")
         }
     }
-
-    
 }

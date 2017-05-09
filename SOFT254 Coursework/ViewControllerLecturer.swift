@@ -28,9 +28,19 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
         markOneAsComplete()
     }
     @IBAction func btnStopSession(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Alert", message: "Are you sure you want to end this session?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: doSomething))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func doSomething(action: UIAlertAction) {
         refreshTimer.invalidate()
         markAllAsComplete()
+        _ = navigationController?.popToRootViewController(animated: true)
     }
+    
     @IBOutlet weak var lblLecTitle: UILabel!
     var sessionID : String = ""
     var myArray : [String] = ["Loading..."]
@@ -77,7 +87,7 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
                         b = false
                     }
                 }
-
+                
                 let url = URL(string: ViewController.GlobalVariable.url + "viewtimes.php?sid=\(self.sessionID)")
                 URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
                     guard let data = data, error == nil else { return }

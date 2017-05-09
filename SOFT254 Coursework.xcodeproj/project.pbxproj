@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83055D911EBE43C8000B7DAB /* ViewControllerWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83055D901EBE43C7000B7DAB /* ViewControllerWeb.swift */; };
 		831C916C1EA12B4C004DED8A /* internetCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C916B1EA12B4C004DED8A /* internetCheck.swift */; };
 		83D7BFB71EB7D28900457937 /* ViewControllerHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7BFB61EB7D28900457937 /* ViewControllerHelp.swift */; };
 		F11940831E8EA7C30063E788 /* ViewControllerLecturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83055D901EBE43C7000B7DAB /* ViewControllerWeb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWeb.swift; sourceTree = "<group>"; };
 		831C916B1EA12B4C004DED8A /* internetCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = internetCheck.swift; sourceTree = "<group>"; };
 		83D7BFB61EB7D28900457937 /* ViewControllerHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHelp.swift; sourceTree = "<group>"; };
 		F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLecturer.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				F19DE9EC1E7FFEC000CD3B16 /* ViewController.swift */,
 				831C916B1EA12B4C004DED8A /* internetCheck.swift */,
 				F19DE9EE1E7FFEC000CD3B16 /* Main.storyboard */,
+				83055D901EBE43C7000B7DAB /* ViewControllerWeb.swift */,
 				F11940841E8EA88D0063E788 /* ViewControllerStudent.swift */,
 				F11940821E8EA7C30063E788 /* ViewControllerLecturer.swift */,
 				F19DE9F11E7FFEC000CD3B16 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 			files = (
 				F11940851E8EA88D0063E788 /* ViewControllerStudent.swift in Sources */,
 				F11940831E8EA7C30063E788 /* ViewControllerLecturer.swift in Sources */,
+				83055D911EBE43C8000B7DAB /* ViewControllerWeb.swift in Sources */,
 				831C916C1EA12B4C004DED8A /* internetCheck.swift in Sources */,
 				83D7BFB71EB7D28900457937 /* ViewControllerHelp.swift in Sources */,
 				F19DE9ED1E7FFEC000CD3B16 /* ViewController.swift in Sources */,

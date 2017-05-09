@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="A8b-36-glN">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="yqV-iC-FbZ">
-                                <rect key="frame" x="94.5" y="149" width="131" height="29"/>
+                                <rect key="frame" x="122" y="149" width="131" height="29"/>
                                 <segments>
                                     <segment title="Lecturer"/>
                                     <segment title="Student"/>
@@ -33,13 +33,13 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TC-Us-26b">
-                                <rect key="frame" x="15" y="99" width="85" height="21"/>
+                                <rect key="frame" x="32.5" y="99" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="U7w-QG-LxF">
-                                <rect key="frame" x="100" y="202" width="120" height="30"/>
+                                <rect key="frame" x="127.5" y="202" width="120" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="6p4-TU-A92"/>
                                 </constraints>
@@ -51,7 +51,7 @@
                                 </connections>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XE-qA-sf2">
-                                <rect key="frame" x="135.5" y="202" width="49" height="30"/>
+                                <rect key="frame" x="163" y="202" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="btnStu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVY-mg-k24"/>
@@ -59,13 +59,13 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAn-9c-syO">
-                                <rect key="frame" x="11" y="207" width="79" height="21"/>
+                                <rect key="frame" x="38.5" y="207" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwL-Ah-Nln">
-                                <rect key="frame" x="135.5" y="257" width="49" height="30"/>
+                                <rect key="frame" x="163" y="257" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="btnLec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5y-wL-uPg"/>
@@ -73,9 +73,9 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vTI-hg-MPT">
-                                <rect key="frame" x="110" y="94" width="100" height="30"/>
+                                <rect key="frame" x="127.5" y="94" width="120" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="7YB-Vh-qes"/>
+                                    <constraint firstAttribute="width" constant="120" id="7YB-Vh-qes"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -102,6 +102,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lab Support" id="1X0-nC-H6A">
                         <barButtonItem key="backBarButtonItem" title="Back" id="D2J-KO-OUY"/>
+                        <barButtonItem key="leftBarButtonItem" title="View History" id="IFI-wf-xQe">
+                            <connections>
+                                <action selector="btnHistory:" destination="BYZ-38-t0r" id="qTz-7l-wLg"/>
+                                <segue destination="o78-bZ-aUm" kind="show" identifier="showHistory" id="j5x-JF-iqx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="tqv-SS-sy3">
                             <connections>
                                 <segue destination="d40-oj-1G8" kind="show" id="i0O-Sm-tP6"/>
@@ -111,6 +117,7 @@
                     <connections>
                         <outlet property="btnGoToLecturer" destination="wwL-Ah-Nln" id="bMN-5l-Ycg"/>
                         <outlet property="btnGoToStudent" destination="5XE-qA-sf2" id="f1v-y5-MAh"/>
+                        <outlet property="btnHistory" destination="IFI-wf-xQe" id="tvu-j4-1vl"/>
                         <outlet property="lblPassword" destination="qAn-9c-syO" id="UU8-Rz-O3m"/>
                         <outlet property="segPicker" destination="yqV-iC-FbZ" id="3Xj-RY-CNG"/>
                         <outlet property="txtID" destination="vTI-hg-MPT" id="tV2-HQ-Wac"/>
@@ -130,11 +137,11 @@
                         <viewControllerLayoutGuide type="bottom" id="oXO-f9-Mpj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eHC-QA-G6A">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq5-eA-6Lq">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Mark as Complete" id="Q5I-PW-tjY">
                                         <connections>
@@ -149,14 +156,14 @@
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uIP-mW-GrC">
-                                <rect key="frame" x="16" y="79" width="288" height="342"/>
+                                <rect key="frame" x="16" y="79" width="343" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="LabelCell" textLabel="Mdk-Eq-8kf" detailTextLabel="zOX-xO-vwL" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="US9-4g-xaG" customClass="DetailTableViewCell" customModule="SOFT254_Coursework" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="288" height="75"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="US9-4g-xaG" id="4Ft-i7-p7w">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mdk-Eq-8kf">
@@ -187,11 +194,11 @@
                                 </connections>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6ve-Sh-cMW">
-                                <rect key="frame" x="274" y="391" width="20" height="20"/>
+                                <rect key="frame" x="329" y="578" width="20" height="20"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refreshing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEw-xQ-rQw">
-                                <rect key="frame" x="186" y="390" width="83" height="21"/>
+                                <rect key="frame" x="241" y="577" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -238,11 +245,11 @@
                         <viewControllerLayoutGuide type="bottom" id="7xe-ak-uSx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BcB-OT-OJR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-dU-4vk">
-                                <rect key="frame" x="85" y="104" width="150" height="30"/>
+                                <rect key="frame" x="112.5" y="104" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="kUM-QG-k4L"/>
                                 </constraints>
@@ -251,13 +258,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltX-Nf-xWy">
-                                <rect key="frame" x="25" y="109" width="50" height="21"/>
+                                <rect key="frame" x="52.5" y="109" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfq-uL-YpS">
-                                <rect key="frame" x="112.5" y="154" width="95" height="30"/>
+                                <rect key="frame" x="140" y="154" width="95" height="30"/>
                                 <state key="normal" title="Add to Queue"/>
                                 <connections>
                                     <action selector="btnAddToQ:" destination="voD-de-NCc" eventType="touchUpInside" id="U9o-Ne-gj9"/>
@@ -292,6 +299,42 @@
             </objects>
             <point key="canvasLocation" x="2292" y="35.532233883058474"/>
         </scene>
+        <!--Queue History-->
+        <scene sceneID="ptY-My-aTW">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerWeb" title="Queue History" id="o78-bZ-aUm" customClass="ViewControllerWeb" customModule="SOFT254_Coursework" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Of-QB-QCN"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Ad-Nk-uFe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xYC-dU-hH3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSX-LO-vDE">
+                                <rect key="frame" x="16" y="-44" width="343" height="691"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="o78-bZ-aUm" id="VbW-Jv-SWc"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="MSX-LO-vDE" secondAttribute="leading" id="40T-sS-Ry2"/>
+                            <constraint firstItem="3Ad-Nk-uFe" firstAttribute="top" secondItem="MSX-LO-vDE" secondAttribute="bottom" constant="20" id="Khb-2x-DQC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MSX-LO-vDE" secondAttribute="trailing" id="gaf-FU-H7m"/>
+                            <constraint firstItem="MSX-LO-vDE" firstAttribute="top" secondItem="3Of-QB-QCN" secondAttribute="bottom" constant="-64" id="oKW-e6-HR1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="MSX-LO-vDE" id="B7q-23-fS5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyG-tf-lwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925.60000000000002" y="821.73913043478262"/>
+        </scene>
         <!--Help-->
         <scene sceneID="cYf-Iz-TJA">
             <objects>
@@ -301,11 +344,11 @@
                         <viewControllerLayoutGuide type="bottom" id="MRA-c2-kgO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tbb-DM-qip">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-Gf-JNU">
-                                <rect key="frame" x="61.5" y="89" width="197" height="29"/>
+                                <rect key="frame" x="89" y="89" width="197" height="29"/>
                                 <segments>
                                     <segment title="Home"/>
                                     <segment title="Student"/>
@@ -317,23 +360,23 @@
                                 </connections>
                             </segmentedControl>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dID-Fc-hoP">
-                                <rect key="frame" x="16" y="115" width="288" height="345"/>
+                                <rect key="frame" x="16" y="115" width="343" height="532"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Session ID: Enter the 4 digit code the lecturer has provided at the start of the practical to join the lab support queue. For lecturers, use the code to view students waiting the in the lab support queue.  If you are a student, no passwords are required to then access the student page.  If you are a lecturer, then a password is required to view students in the queue. You can only proceed once the password has been entered correctly. This password will be sent to all lecturers which they will need to keep a note of. Any password changes, emails will be sent out notifying of the change.   This app requires an internet conenction so it also checks occasionally and on startup whether you are connected or not. If you are not connected, you will not be able to proceed to either page. If you are already on the page, then the ability to add yourself to the queue as a student won't be possible and lecturers won't be able to view or edit the queue until an internet conenction is reestablished.</mutableString>
+                                <string key="text">Session ID: Enter the 4 digit code the lecturer has provided at the start of the practical to join the lab support queue. For lecturers, use the code to view students waiting the in the lab support queue.  If you are a student, no passwords are required to then access the student page.  If you are a lecturer, then a password is required to view students in the queue. You can only proceed once the password has been entered correctly. This password will be sent to all lecturers which they will need to keep a note of. Any password changes, emails will be sent out notifying of the change.   This app requires an internet conenction so it also checks occasionally and on startup whether you are connected or not. If you are not connected, you will not be able to proceed to either page. If you are already on the page, then the ability to add yourself to the queue as a student won't be possible and lecturers won't be able to view or edit the queue until an internet conenction is reestablished.</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-IC-7RY">
-                                <rect key="frame" x="16" y="115" width="288" height="345"/>
+                                <rect key="frame" x="16" y="115" width="343" height="532"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">On the student page, all that is needed is for the student to enter their name and hit 'Add to Queue' button. They will be notified if it was successful and they will be in the lab support queue.</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcj-Sz-YoW">
-                                <rect key="frame" x="16" y="115" width="288" height="345"/>
+                                <rect key="frame" x="16" y="115" width="343" height="532"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">On the lecturer page, the main object on the screen is a list which will be populated by students who are waiting in the queue to be seen. The student to see first will be at the top of the list. The name of the student is shown and also the time they were added to the queue.   Every few seconds the list will automatically refresh to show the latest queue.   Once a student has been attended to, you select the student then tap the button on the menu bar at the bottom of the screen 'Mark as Complete'. This will remove them from the queue and update it. At the end of the practical, you should hit 'Stop Session' also on the menu bar. This will remove any remaining students from the queue and stop refreshing the queue.</mutableString>
+                                <string key="text">On the lecturer page, the main object on the screen is a list which will be populated by students who are waiting in the queue to be seen. The student to see first will be at the top of the list. The name of the student is shown and also the time they were added to the queue.   Every few seconds the list will automatically refresh to show the latest queue.   Once a student has been attended to, you select the student then tap the button on the menu bar at the bottom of the screen 'Mark as Complete'. This will remove them from the queue and update it. At the end of the practical, you should hit 'Stop Session' also on the menu bar. This will remove any remaining students from the queue and stop refreshing the queue.</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

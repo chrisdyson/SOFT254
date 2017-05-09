@@ -13,6 +13,7 @@ import SystemConfiguration
 // Function for checking whether the device is connected to the internet or not. Will return false if not. 
 // Source: https://github.com/Isuru-Nanayakkara/Reach
 
+
 public class Reachability {
     class func isConnectedToNetwork() -> Bool {
         var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))

@@ -71,7 +71,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }).resume()
     }
-    
+
     var lecPassword = ""
     @IBOutlet weak var txtID: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -79,6 +79,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var segPicker: UISegmentedControl!
     @IBOutlet weak var btnGoToLecturer: UIButton!
     @IBOutlet weak var btnGoToStudent: UIButton!
+    @IBOutlet weak var btnHistory: UIBarButtonItem!
+    
+    @IBAction func btnHistory(_ sender: Any) {
+
+    }
     
     @IBAction func btnStu(_ sender: Any) {
         resetOnBack()
@@ -137,13 +142,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         switch (textField) {
         case txtID:
             if let t = txtID.text, !t.isEmpty {
-                segPicker.isHidden = false
+                if (t.characters.count == 4) {
+                    segPicker.isHidden = false
+                    ViewController.GlobalVariable.sessionID = t
+                }
+                else {
+                    resetOnBack()
+                }
             }
             else {
                 resetOnBack()
-            }
-            if let t = txtID.text {
-                ViewController.GlobalVariable.sessionID = t
             }
         case txtPassword:
             if let t = txtPassword.text, t.isEmpty {
@@ -169,6 +177,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
         txtID.resignFirstResponder()
         txtPassword.resignFirstResponder()
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        if let ident = identifier {
+            if ident == "showHistory" {
+                
+                let alert = UIAlertController(title: "Alert", message: "Please enter the lecturers admin password", preferredStyle: .alert)
+                alert.addTextField { (textField) in
+                    textField.text = ""
+                    textField.isSecureTextEntry = true
+                }
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                    let textField = alert?.textFields![0]
+                    let t = textField?.text
+                    if (t == self.lecPassword) {
+                        self.resetOnBack()
+                        self.performSegue(withIdentifier: "showHistory", sender: nil)
+                    }
+                    else {
+                        let alert = UIAlertController(title: "Error", message: "Incorrect Password", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
 
+                }))
+                self.present(alert, animated: true, completion: nil)
+                return false
+            }
+        }
+        return true
+    }
+    
 }
 
