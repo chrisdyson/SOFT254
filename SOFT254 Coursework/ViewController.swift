@@ -187,7 +187,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     textField.text = ""
                     textField.isSecureTextEntry = true
                 }
-                
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
                     let textField = alert?.textFields![0]
                     let t = textField?.text

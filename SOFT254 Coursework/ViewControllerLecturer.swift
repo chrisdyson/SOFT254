@@ -30,12 +30,12 @@ class ViewControllerLecturer: UIViewController, UITableViewDelegate, UITableView
     @IBAction func btnStopSession(_ sender: Any) {
         
         let alert = UIAlertController(title: "Alert", message: "Are you sure you want to end this session?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: doSomething))
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: doStopEvents))
         alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func doSomething(action: UIAlertAction) {
+    func doStopEvents(action: UIAlertAction) {
         refreshTimer.invalidate()
         markAllAsComplete()
         _ = navigationController?.popToRootViewController(animated: true)
